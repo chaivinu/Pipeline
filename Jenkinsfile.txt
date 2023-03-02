@@ -1,0 +1,58 @@
+        pipeline {
+    agent any 
+    stages{
+        stage('BUILD') {
+            steps{
+                 sh '''
+                    sleep 4
+                    echo "This is a BUILD stage"
+                '''
+            }
+        }
+
+        stage('TEST') {
+            steps{
+                sh '''
+                    sleep 6
+                    echo "This is a TEST stage"
+                '''
+            }
+        }
+
+        stage('DEPLOY') {
+            steps{
+                sh '''
+                    sleep 5
+                    echo "This is a DEPLOY stage"
+                '''
+            }
+        }
+
+        stage('4th stage') {
+            steps{
+                sh '''
+                    sleep 4
+                    echo "This is 4th stage"
+                '''            
+            }
+        }
+
+        stage('5th stage') {
+            steps{
+                sh '''
+                    sleep 3
+                    echo "This is 5th stage"
+                '''            
+            }
+        }
+    
+    }
+}
+    
+
+Jen
+
+
+    
+
+
